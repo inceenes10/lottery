@@ -31,7 +31,8 @@ const compiledCode = solc.compile(JSON.stringify(input));
 let output = JSON.parse(compiledCode);
 
 const abi = output["contracts"]["Lottery.sol"]["Lottery"].abi;
-const bytecode = output["contracts"]["Lottery.sol"]["Lottery"].evm.bytecode.object;
+const bytecode =
+    output["contracts"]["Lottery.sol"]["Lottery"].evm.bytecode.object;
 
 export default {
     interface: abi,
